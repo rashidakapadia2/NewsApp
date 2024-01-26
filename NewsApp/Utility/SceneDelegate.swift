@@ -25,10 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
            }
            
            private func getInitialViewController() -> UIViewController {
-               let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-               let viewController : ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-               let viewmodel = DetailViewModel()
-               viewController.viewModel = viewmodel
+               let viewmodel = ListViewModel()
+               let viewController: NewsListViewController = NewsListViewController(viewModel: viewmodel)
                return viewController
            }
 

@@ -10,7 +10,7 @@ import Foundation
 typealias AnyDict = [String: Any]
 typealias AnyDictString = [String: String]
 
-let DEV_ROOT_POINT = "http://api.weatherapi.com"
+let DEV_ROOT_POINT = "https://newsdata.io/"
 let PROD_ROOT_POINT = ""
 
 let contentValue = "application/json"
@@ -35,26 +35,27 @@ var BaseURL: String {
 }
 
 enum APIServices {
-    case current(parameters: AnyDict)
-    case forecast(parameters: AnyDict)
+    case newsListing(parameters: AnyDict)
+    case newsDetails(parameters: AnyDict)
 }
 
     extension APIServices {
         var Path: String {
-            let version = "/v1/"
+            let version = "api/1/"
             var servicePath: String = ""
             switch self {
-            case .current: servicePath = "current.json"
-            case .forecast: servicePath = "forecast.json"
+            case .newsListing: servicePath = "news"
+            case .newsDetails: servicePath = "forecast.json"
             }
             
             return BaseURL + version + servicePath
         }
         var parameters: AnyDict? {
                switch self {
-               case .current(parameters: let param), .forecast(let param) :
+               case .newsListing(parameters: let param), .newsDetails(let param) :
                    var finalParams = param
-                   finalParams["key"] = "ba01540f04094b32a5865317231710"
+                   finalParams["apikey"] = "pub_3714457337425817f25951adcf415c3d7ad4b"
+                   finalParams["language"] = "en"
                    return finalParams
                }
            }
