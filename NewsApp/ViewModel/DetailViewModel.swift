@@ -8,10 +8,13 @@
 import Foundation
 
 protocol DetailViewModelProtocol {
-    
+    var result: NewsResult? { get }
 }
 
 class DetailViewModel: DetailViewModelProtocol {
+    var result: NewsResult?
     
-    
+    init(result: NewsResult?) {
+        self.result = result
+    }
 }
