@@ -74,9 +74,4 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        <#code#>
-    }
-    
-    
 }
