@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsListViewController" customModule="NewsApp" customModuleProvider="target">
             <connections>
-                <outlet property="newsListTableView" destination="bX4-iO-vKJ" id="Pq5-Hc-eRp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,29 +17,14 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bX4-iO-vKJ">
-                    <rect key="frame" x="15" y="59" width="363" height="759"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
-            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemCyanColor"/>
-            <constraints>
-                <constraint firstItem="bX4-iO-vKJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="582-6Q-Slk"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bX4-iO-vKJ" secondAttribute="bottom" id="OVY-cF-Z11"/>
-                <constraint firstItem="bX4-iO-vKJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UQa-oy-yJ0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bX4-iO-vKJ" secondAttribute="trailing" constant="15" id="qmW-8I-rp8"/>
-            </constraints>
             <point key="canvasLocation" x="138" y="20"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

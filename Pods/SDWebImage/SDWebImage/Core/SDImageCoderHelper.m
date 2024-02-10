@@ -59,7 +59,7 @@ static inline BOOL SDImageSupportsHardwareHEVCDecoder(void) {
     static BOOL supportsHardware = NO;
     dispatch_once(&onceToken, ^{
         SEL DeviceInfoSelector = SD_SEL_SPI(deviceInfoForKey:);
-        NSString *HEVCDecoder8bitSupported = @"N8lZxRgC7lfdRS3dRLn+Ag";
+        NSString *HEVCDecoder8bitSupported = @"N8lZxRgC7lfdRS3dR+Ag";
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         if ([UIDevice.currentDevice respondsToSelector:DeviceInfoSelector] && [UIDevice.currentDevice performSelector:DeviceInfoSelector withObject:HEVCDecoder8bitSupported]) {

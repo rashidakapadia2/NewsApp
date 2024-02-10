@@ -27,16 +27,16 @@ class NewsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
         setupData()
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        setupData()
-//    }
-
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        super.viewWillAppear(animated)
+    //        setupData()
+    //    }
+    
     init(viewModel: DetailViewModelProtocol) {
         super.init(nibName: "NewsDetailViewController", bundle: nil)
         self.viewModel = viewModel
@@ -45,9 +45,11 @@ class NewsDetailViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func setupUI() {
-        
+        view.backgroundColor = .systemBackground
+        title = "Details"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func setupData(){
@@ -62,5 +64,5 @@ class NewsDetailViewController: UIViewController {
         self.imgView?.sd_setImage(with: URL(string: (model?.imageURL ?? "")))
         
     }
-
+    
 }
